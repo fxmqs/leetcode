@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{F405F247-2B38-4ED2-AFBE-1BC043496A54}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\code\cpp\googletest-release-1.8.0\googletest\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>E:\code\cpp\googletest-release-1.8.0\googletest\msvc\x64\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>gtestd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="leetcode_defs.cpp" />
+    <ClCompile Include="Solution10.cpp" />
+    <ClCompile Include="Solution11.cpp" />
+    <ClCompile Include="Solution12.cpp" />
+    <ClCompile Include="Solution13.cpp" />
+    <ClCompile Include="Solution14.cpp" />
+    <ClCompile Include="Solution15.cpp" />
+    <ClCompile Include="Solution16.cpp" />
+    <ClCompile Include="Solution17.cpp" />
+    <ClCompile Include="Solution18.cpp" />
+    <ClCompile Include="Solution19.cpp" />
+    <ClCompile Include="Solution20.cpp" />
+    <ClCompile Include="Solution21.cpp" />
+    <ClCompile Include="Solution22.cpp" />
+    <ClCompile Include="Solution23.cpp" />
+    <ClCompile Include="Solution24.cpp" />
+    <ClCompile Include="Solution25.cpp" />
+    <ClCompile Include="Solution26.cpp" />
+    <ClCompile Include="Solution27.cpp" />
+    <ClCompile Include="Solution28.cpp" />
+    <ClCompile Include="Solution29.cpp" />
+    <ClCompile Include="Solution30.cpp" />
+    <ClCompile Include="Solution31.cpp" />
+    <ClCompile Include="Solution32.cpp" />
+    <ClCompile Include="Solution33.cpp" />
+    <ClCompile Include="Solution34.cpp" />
+    <ClCompile Include="Solution35.cpp" />
+    <ClCompile Include="Solution36.cpp" />
+    <ClCompile Include="Solution37.cpp" />
+    <ClCompile Include="Solution38.cpp" />
+    <ClCompile Include="Solution39.cpp" />
+    <ClCompile Include="Solution40.cpp" />
+    <ClCompile Include="Solution41.cpp" />
+    <ClCompile Include="Solution42.cpp" />
+    <ClCompile Include="Solution43.cpp" />
+    <ClCompile Include="Solution44.cpp" />
+    <ClCompile Include="Solution45.cpp" />
+    <ClCompile Include="Solution46.cpp" />
+    <ClCompile Include="Solution47.cpp" />
+    <ClCompile Include="Solution48.cpp" />
+    <ClCompile Include="Solution49.cpp" />
+    <ClCompile Include="Solution_3.cpp" />
+    <ClCompile Include="Solution_4.cpp" />
+    <ClCompile Include="Solution_5.cpp" />
+    <ClCompile Include="Solution_6.cpp" />
+    <ClCompile Include="Solution_7.cpp" />
+    <ClCompile Include="Solution_8.cpp" />
+    <ClCompile Include="Solution_9.cpp" />
+    <ClCompile Include="src\leetcode.cpp" />
+    <ClCompile Include="TwoSum_2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\googletest-release-1.8.0\googletest\include\gtest\gtest.h" />
+    <ClInclude Include="leetcode_defs.h" />
+    <ClInclude Include="Solution10.h" />
+    <ClInclude Include="Solution11.h" />
+    <ClInclude Include="Solution12.h" />
+    <ClInclude Include="Solution13.h" />
+    <ClInclude Include="Solution14.h" />
+    <ClInclude Include="Solution15.h" />
+    <ClInclude Include="Solution16.h" />
+    <ClInclude Include="Solution17.h" />
+    <ClInclude Include="Solution18.h" />
+    <ClInclude Include="Solution19.h" />
+    <ClInclude Include="Solution20.h" />
+    <ClInclude Include="Solution21.h" />
+    <ClInclude Include="Solution22.h" />
+    <ClInclude Include="Solution23.h" />
+    <ClInclude Include="Solution24.h" />
+    <ClInclude Include="Solution25.h" />
+    <ClInclude Include="Solution26.h" />
+    <ClInclude Include="Solution27.h" />
+    <ClInclude Include="Solution28.h" />
+    <ClInclude Include="Solution29.h" />
+    <ClInclude Include="Solution30.h" />
+    <ClInclude Include="Solution31.h" />
+    <ClInclude Include="Solution32.h" />
+    <ClInclude Include="Solution33.h" />
+    <ClInclude Include="Solution34.h" />
+    <ClInclude Include="Solution35.h" />
+    <ClInclude Include="Solution36.h" />
+    <ClInclude Include="Solution37.h" />
+    <ClInclude Include="Solution38.h" />
+    <ClInclude Include="Solution39.h" />
+    <ClInclude Include="Solution40.h" />
+    <ClInclude Include="Solution41.h" />
+    <ClInclude Include="Solution42.h" />
+    <ClInclude Include="Solution43.h" />
+    <ClInclude Include="Solution44.h" />
+    <ClInclude Include="Solution45.h" />
+    <ClInclude Include="Solution46.h" />
+    <ClInclude Include="Solution47.h" />
+    <ClInclude Include="Solution48.h" />
+    <ClInclude Include="Solution49.h" />
+    <ClInclude Include="Solution_3.h" />
+    <ClInclude Include="Solution_4.h" />
+    <ClInclude Include="Solution_5.h" />
+    <ClInclude Include="Solution_6.h" />
+    <ClInclude Include="Solution_7.h" />
+    <ClInclude Include="Solution_8.h" />
+    <ClInclude Include="Solution_9.h" />
+    <ClInclude Include="TwoSum_2.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
