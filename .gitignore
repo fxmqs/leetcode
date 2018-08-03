@@ -4,5 +4,7 @@ Debug
 x64
 .cproject
 .project
+.idea
+cmake-build-debug
 *.vcxproj.filters
 *.vcxproj.user
