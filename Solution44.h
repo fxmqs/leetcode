@@ -34,6 +34,28 @@ public:
 		return false;
 	}
 
+	bool findAllSubStrings(string s, vector<string> &substrings) {
+		int l = 0;
+		for (int i = 0; i < substrings.size(); ++i) {
+			int j = l;
+			for (; j < s.size(); ++j) {
+				int k = 0;
+				for (; k < substrings[i].size(); ++k) {
+					if (j + k == s.size()) return false;
+
+					if (s[j + k] == substrings[i][k] || substrings[i][k] == '?') continue;
+					break;
+				}
+
+				if (k == substrings[i].size()) break;
+			}
+
+			l = j + substrings[i].size();
+		}
+
+		return l <= s.size();
+	}
+
 	bool isMatch(string s, string p) {
 		if (s.empty() && p.empty()) return true;
 		if (s.empty()) {
@@ -41,40 +63,58 @@ public:
 			return false;
 		}
 
-		/// Ëæ±ã¼ô¸öÖ¦
-		int l = 0;
-		int pre_l = 0;
-		for (; l < p.size(); ++l) {
-			if (p.at(l) == '*') break;
-			else if (s.size() == l) {
-				for (int i = l; i < p.size(); ++i) {
-					if (p[i] == '*') continue;
-					else return false;
-				}
-				return true;
+		/// ÅÐ¶Ï * µÄÊýÁ¿£¬Ò»¸ö¾Í±¬¸ãÁË
+		int count = 0;
+		for (int i = 0; i < p.size(); ++i) {
+			if (p[i] == '*') {
+				++count;
+				for (; i < p.size() && p[i] == '*'; ++i);
 			}
-			else if (p.at(l) == '?' || p.at(l) == s.at(l)) {
-				++pre_l;
+		}
+
+		if (count <= 1) return dfs(s.c_str(), p.c_str());
+
+		/// ×óÓÒ¼ôÖ¦
+		int i = 0;
+		for (; i < p.size(); ++i) {
+			if (p[i] == '*') {
+				break;
+			}
+
+			if (i == s.size()) return false;
+			if (s[i] == p[i] || p[i] == '?') continue;
+			return false;
+		}
+
+		int r = p.size() - 1;
+		for (; r >= 0; --r) {
+			if (p[r] == '*') break;
+
+			int rs = s.size() - p.size() + r;
+			if (rs < 0) return false;
+			if (p[r] == s[rs] || p[r] == '?') continue;
+			return false;
+		}
+
+		/// ²Ã¼ô×Ó´®
+		int rs = s.size() - p.size() + r + 1;
+		s = s.substr(i, rs - i);
+		vector<string> substrings;
+		string res = "";
+		for (; i < r; ++i) {
+			if (p[i] == '*') {
+				if (!res.empty()) {
+					substrings.push_back(res);
+					res = "";
+				}
 				continue;
-			}
-			return false;
+ 			}
+			res += p[i];
 		}
-		if (l == p.size()) return dfs(s.c_str(), p.c_str());
-		int r = 1;
-		for (; p.size() - r > l; ++r) {
-			if (p.at(p.size() - r) == '*') break;
-			else if (s.size() - pre_l + 1 == r) {
-				for (int i = l; i < p.size() - r; ++i) {
-					if (p[i] == '*') continue;
-					else return false;
-				}
-				return true;
-			}
-			else if (p.at(p.size() - r) == '?' || p.at(p.size() - r) == s.at(s.size() - r)) continue;
-			return false;
-		}
-		
-		return dfs(s.c_str(), p.c_str());
+		if (!res.empty()) substrings.push_back(res);
+
+		return findAllSubStrings(s, substrings);
+
 	}
 };
 
