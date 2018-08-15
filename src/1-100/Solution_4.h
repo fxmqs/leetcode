@@ -17,7 +17,8 @@ public:
 		}
 		n = nums1.size();
 		m = nums2.size();
-
+		
+		int mid = (n + m) / 2;
 		return 0;
 	}
 };

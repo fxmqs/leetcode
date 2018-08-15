@@ -16,7 +16,7 @@ public:
 
 		for (int x = 0; x < n / 2; ++x) {
 			for (int y = x; y < m - x - 1; ++y) {
-				int len = m - x -x - 1;
+				int len = m - 1;
 				std::swap(matrix[x][y], matrix[len - y][x]);
 				std::swap(matrix[len - y][x], matrix[len - x][len - y]);
 				std::swap(matrix[len - x][len - y], matrix[y][len - x]);
