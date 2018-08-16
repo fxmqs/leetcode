@@ -25,6 +25,10 @@
     <ClCompile Include="Solution53.cpp" />
     <ClCompile Include="Solution54.cpp" />
     <ClCompile Include="Solution55.cpp" />
+    <ClCompile Include="Solution56.cpp" />
+    <ClCompile Include="Solution57.cpp" />
+    <ClCompile Include="Solution58.cpp" />
+    <ClCompile Include="Solution59.cpp" />
     <ClCompile Include="src\1-100\Solution10.cpp" />
     <ClCompile Include="src\1-100\Solution11.cpp" />
     <ClCompile Include="src\1-100\Solution12.cpp" />
@@ -83,6 +87,10 @@
     <ClInclude Include="Solution53.h" />
     <ClInclude Include="Solution54.h" />
     <ClInclude Include="Solution55.h" />
+    <ClInclude Include="Solution56.h" />
+    <ClInclude Include="Solution57.h" />
+    <ClInclude Include="Solution58.h" />
+    <ClInclude Include="Solution59.h" />
     <ClInclude Include="src\1-100\Solution10.h" />
     <ClInclude Include="src\1-100\Solution11.h" />
     <ClInclude Include="src\1-100\Solution12.h" />
