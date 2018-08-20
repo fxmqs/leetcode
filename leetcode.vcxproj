@@ -19,6 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Solution71.cpp" />
+    <ClCompile Include="Solution72.cpp" />
+    <ClCompile Include="Solution73.cpp" />
+    <ClCompile Include="Solution74.cpp" />
     <ClCompile Include="src\1-100\Solution10.cpp" />
     <ClCompile Include="src\1-100\Solution11.cpp" />
     <ClCompile Include="src\1-100\Solution12.cpp" />
@@ -92,6 +96,10 @@
     <ClCompile Include="src\leetcode_defs.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Solution71.h" />
+    <ClInclude Include="Solution72.h" />
+    <ClInclude Include="Solution73.h" />
+    <ClInclude Include="Solution74.h" />
     <ClInclude Include="src\1-100\Solution10.h" />
     <ClInclude Include="src\1-100\Solution11.h" />
     <ClInclude Include="src\1-100\Solution12.h" />
